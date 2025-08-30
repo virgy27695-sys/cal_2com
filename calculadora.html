@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculadora de Cubo</title>
+  <script>
+    function cube() {
+      const num = document.getElementById('num');
+      const result = document.getElementById('result');
+      const valor = parseFloat(num.value);
+      if (isNaN(valor)) {
+        result.textContent = 'Por favor ingresa un número válido';
+      } else {
+        const cubo = Math.pow(valor, 3);
+        result.textContent = `El cubo de ${valor} es ${cubo}`;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Calculadora de Cubo</h1>
+  <input type="number" id="num" placeholder="Ingresa un número" />
+  <button onclick="cube()">x<sup>3</sup></button>
+  <p id="result"></p>
+</body>
+</html>
+
